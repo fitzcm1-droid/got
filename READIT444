@@ -40,6 +40,7 @@ public class Circle extends Shape {
         System.out.println("How many edges are in a circle: " + super.numberOfEdges());
         System.out.println("The area of a circle is " + areaOfShape());
     }
+}
 
 public class Rectangle extends Shape {
 
