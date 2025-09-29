@@ -1,0 +1,64 @@
+public class Main {
+
+   public static void main(String[] args) {
+
+      Circle circle = new Circle(7);
+      Rectangle rectangle  = new Rectangle(12,3);
+
+      circle.printInfo();
+      rectangle.printInfo();
+   } 
+} 
+
+public class Shape {
+
+    protected int edges;
+        
+    public Shape(int numberOfEdges) {
+        this.edges = numberOfEdges;
+    }
+
+    public int numberOfEdges() {
+        return edges;
+    }
+} 
+
+public class Circle extends Shape {
+
+    private double radius;
+    
+    public Circle(double r) {
+        super(0); 
+        this.radius = r;
+    }
+
+    public double areaOfShape() {
+        return radius * radius;
+    }
+
+    public void printInfo() {
+        System.out.println("How many edges are in a circle: " + super.numberOfEdges());
+        System.out.println("The area of a circle is " + areaOfShape());
+    }
+
+public class Rectangle extends Shape {
+
+    private double length;
+    private double height;
+
+    public Rectangle (double l, double h) {
+        super(4); 
+        this.length = l;
+        this.height = h;
+    }
+
+    public double areaOfShape() {
+        return length * height;
+    }
+
+    public void printInfo() {
+        System.out.println("How many edges are in a rectangle: " + super.numberOfEdges());
+        System.out.println("The area of a rectangle is " + areaOfShape());
+    }
+}
+} 
